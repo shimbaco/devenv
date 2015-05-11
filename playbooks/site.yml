@@ -5,6 +5,7 @@
   connection: local
   roles:
     - homebrew
+    - basic
     - zsh
     - dotfiles
     - ssh

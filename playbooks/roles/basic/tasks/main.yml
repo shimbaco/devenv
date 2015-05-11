@@ -1,0 +1,6 @@
+- name: パッケージをもろもろインストールする
+  homebrew:
+    name:  '{{ item }}'
+    state: present
+  with_items:
+    - pkg-config # RMagickをインストールするときに必要
