@@ -1,0 +1,10 @@
+- name: nvmをインストールする
+  homebrew:
+    name:  nvm
+    state: present
+
+- name: Node.jsをインストールする
+  shell: source ~/.zshrc && nvm install {{ node_version }}
+
+- name: io.jsをインストールする
+  shell: source ~/.zshrc && nvm install {{ iojs_version }}

@@ -1,0 +1,4 @@
+- name: MySQLをインストールする
+  homebrew:
+    name:  mysql
+    state: present

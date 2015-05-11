@@ -1,0 +1,25 @@
+- name: 設定ファイルを配置する
+  copy:
+    src:  ~/dev/devenv/dotfiles/{{ item }}
+    dest: ~/{{ item }}
+  with_items:
+    - .ackrc
+    - .aliases
+    - .ctags
+    - .gemrc
+    - .gvimrc
+    - .pryrc
+    - .railsrc
+    - .spring.rb
+    - .tmux.conf
+    - .vim/
+    - .vimrc
+    - .zlogin
+    - .zsh/
+    - .zshrc
+    - bin/
+
+- name: sshmに実行権限を与える
+  file:
+    path: ~/bin/sshm
+    mode: 0755

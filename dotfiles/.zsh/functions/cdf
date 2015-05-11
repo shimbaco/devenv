@@ -1,0 +1,22 @@
+# ファイルを検索して、peco って cd するやつ
+# http://qiita.com/yungsang/items/37b548e7a12be28cf01e
+cdf() {
+  local FILENAME="$1"
+
+  if [ -z "$FILENAME" ] ; then
+    echo "Usage: cdf <FILENAME>" >&2
+    return 1
+  fi
+
+  local DIR=$(mdfind -onlyin ~ -name ${FILENAME} | grep -e "/${FILENAME}$" | peco | head -n 1)
+  echo $DIR
+
+  if [ -n "$DIR" ] ; then
+    if [ -f "$DIR" ]; then
+      DIR=${DIR%/*}
+    fi
+
+    echo "cd \"$DIR\""
+    eval "cd \"$DIR\""
+  fi
+}

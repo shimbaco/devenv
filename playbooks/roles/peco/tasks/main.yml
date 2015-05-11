@@ -1,0 +1,4 @@
+- name: pecoをインストールする
+  homebrew:
+    name:  peco
+    state: present

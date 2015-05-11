@@ -1,0 +1,4 @@
+- name: ImageMagickをインストールする
+  homebrew:
+    name:  imagemagick
+    state: present

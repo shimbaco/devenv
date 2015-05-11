@@ -1,0 +1,20 @@
+- hosts: localhost
+  # 対象ホストの情報を取得しない
+  # (取得しないことで実行時間が短縮されるらしい)
+  gather_facts: no
+  connection: local
+  roles:
+    - homebrew
+    - zsh
+    - dotfiles
+    - ssh
+    - direnv
+    - imagemagick
+    - ruby
+    - nodejs
+    - mysql
+    - postgresql
+    - redis
+    - rethinkdb
+    - heroku
+    - peco

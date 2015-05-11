@@ -1,0 +1,3 @@
+- name: Homebrewをアップデート
+  homebrew:
+    update_homebrew: yes

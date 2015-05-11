@@ -1,0 +1,4 @@
+--append=yes
+--recurse=yes
+--langmap=RUBY:+.slim
+--langmap=RUBY:+.erb

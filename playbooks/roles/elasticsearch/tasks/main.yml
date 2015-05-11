@@ -1,0 +1,63 @@
+# Elasticsearch
+# http://www.elastic.co/guide/en/elasticsearch/reference/current/setup-repositories.html
+
+- name: Download and install the Public Signing Key
+  command: wget -qO - https://packages.elasticsearch.org/GPG-KEY-elasticsearch | apt-key add -
+
+- name: Add the following to your /etc/apt/sources.list to enable the repository
+  command: add-apt-repository "deb http://packages.elasticsearch.org/elasticsearch/1.4/debian stable main"
+
+- name: apt-get update
+  apt:
+    update_cache: yes
+
+- name: Install
+  apt:
+    pkg:   elasticsearch
+    state: present
+
+- name: Configure Elasticsearch to automatically start during bootup
+  command: update-rc.d elasticsearch defaults 95 10
+
+
+# OpenJDK
+# http://www.elastic.co/guide/en/elasticsearch/reference/current/setup-service.html
+
+- name: OpenJDKのリポジトリを追加する
+  apt_repository:
+    repo: ppa:webupd8team/java
+
+- name: apt-get update
+  apt:
+    update_cache: yes
+
+- name: Install
+  apt:
+    pkg:   oracle-java7-installer
+    state: present
+
+
+# kuromoji
+
+- name: kuromojiをインストールする
+  command: bin/plugin install elasticsearch/elasticsearch-analysis-kuromoji/2.4.2
+  args:
+    chdir: /usr/share/elasticsearch
+
+- name: Elasticsearchを再起動する
+  service:
+    name:  elasticsearch
+    state: restarted
+
+
+# elasticsearch-inquisitor
+
+- name: elasticsearch-inquisitorをインストールする
+  command: bin/plugin -install polyfractal/elasticsearch-inquisitor
+  args:
+    chdir: /usr/share/elasticsearch
+
+- name: Elasticsearchを再起動する
+  service:
+    name:  elasticsearch
+    state: restarted

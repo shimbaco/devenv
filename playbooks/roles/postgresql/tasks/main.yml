@@ -1,0 +1,4 @@
+- name: PostgreSQLをインストールする
+  homebrew:
+    name:  postgresql
+    state: present

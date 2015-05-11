@@ -1,0 +1,17 @@
+# pecoでヒストリをインクリメンタルに検索して実行
+# http://ayato.hateblo.jp/entry/20140622/1403423524
+function hisf() {
+    local tac
+    if which tac > /dev/null; then
+        tac="tac"
+    else
+        tac="tail -r"
+    fi
+    BUFFER=$(history -n 1 | \
+        eval $tac | \
+        peco --query "$LBUFFER")
+    CURSOR=$#BUFFER
+
+    print -s $BUFFER # 選択したコマンドをヒストリに追加する
+    eval $BUFFER
+}

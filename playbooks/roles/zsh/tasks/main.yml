@@ -1,0 +1,13 @@
+- name: zshをインストールする
+  homebrew:
+    name:  zsh
+    state: present
+
+- name: インストールしたzshが選択できるようにする
+  lineinfile:
+    dest: /etc/shells
+    line: /usr/local/bin/zsh
+  sudo: yes
+
+- name: 使用するシェルをzshにする
+  command: chsh -s /usr/local/bin/zsh

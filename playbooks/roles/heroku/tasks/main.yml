@@ -1,0 +1,4 @@
+- name: Heroku Toolbeltをインストールする
+  homebrew:
+    name:  heroku-toolbelt
+    state: present

@@ -1,0 +1,4 @@
+- name: direnvをインストールする
+  homebrew:
+    name:  direnv
+    state: present
