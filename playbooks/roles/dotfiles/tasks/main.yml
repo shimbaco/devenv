@@ -1,9 +1,9 @@
 - name: 設定ファイルを配置する
-  copy:
+  file:
     src:  ~/dev/devenv/dotfiles/{{ item }}
-    dest: ~/{{ item }}
+    path: ~/{{ item }}
+    state: link
   with_items:
-    - .atom/
     - .ackrc
     - .aliases
     - .ctags
@@ -15,12 +15,17 @@
     - .railsrc
     - .spring.rb
     - .tmux.conf
-    - .vim/
     - .vimrc
     - .zlogin
-    - .zsh/
     - .zshrc
-    - bin/
+
+- name: 設定ファイルを配置する (ディレクトリ)
+  command: ln -nfs ~/dev/devenv/dotfiles/{{ item }} ~/
+  with_items:
+    - .atom
+    - .vim
+    - .zsh
+    - bin
 
 - name: sshmに実行権限を与える
   file:
