@@ -1,3 +1,11 @@
+- name: ~/.nvmを作る
+  file:
+    path: ~/.nvm
+    state: directory
+
+- name: Copy nvm-exec to NVM's working directory
+  command: cp /usr/local/opt/nvm/nvm-exec ~/.nvm/
+
 - name: nvmをインストールする
   homebrew:
     name:  nvm

@@ -1,0 +1,7 @@
+.DS_Store
+
+/dotfiles/.atom/.apm
+/dotfiles/.atom/.node-gyp
+/dotfiles/.atom/compile-cache
+/dotfiles/.atom/packages
+/dotfiles/.atom/storage

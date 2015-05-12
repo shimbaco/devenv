@@ -9,7 +9,8 @@ export USER=vagrant
 eval "$(rbenv init -)"
 
 # nvm
-source ~/.nvm/nvm.sh
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 # プロンプトの表示形式
 # http://news.mynavi.jp/column/zsh/002/index.html

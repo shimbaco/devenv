@@ -1,0 +1,32 @@
+"*":
+  "exception-reporting":
+    userId: "ec689dd8-f8c2-3b84-6e60-82f886bee482"
+  welcome:
+    showOnStartup: false
+  metrics:
+    userId: "ac7d9da1254a329593e491f3c946a8248950d5b8"
+  core:
+    excludeVcsIgnoredPaths: true
+    themes: [
+      "one-dark-ui"
+      "one-dark-syntax"
+    ]
+    audioBeep: false
+  editor:
+    fontFamily: "Ricty Diminished"
+    showIndentGuide: true
+    invisibles: {}
+    zoomFontWhenCtrlScrolling: true
+    fontSize: 18
+  "autocomplete-plus":
+    fileBlacklist: [
+      ".*"
+    ]
+  "rails-transporter": {}
+  "autocomplete-emojis": {}
+  autosave:
+    enabled: true
+  "aligner-css": {}
+  "aligner-scss": {}
+  "aligner-ruby": {}
+  linter: {}

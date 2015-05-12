@@ -3,10 +3,13 @@
     src:  ~/dev/devenv/dotfiles/{{ item }}
     dest: ~/{{ item }}
   with_items:
+    - .atom/
     - .ackrc
     - .aliases
     - .ctags
     - .gemrc
+    - .gitconfig
+    - .gitignore_global
     - .gvimrc
     - .pryrc
     - .railsrc

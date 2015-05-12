@@ -1,3 +1,15 @@
 - name: Homebrewをアップデート
   homebrew:
     update_homebrew: yes
+
+- name: Homebrewのtapリポジトリを追加
+  homebrew_tap:
+    tap: '{{ item }}'
+    state: present
+  with_items:
+    - caskroom/cask
+
+- name: Homebrew-Caskをインストールする
+  homebrew:
+    name: brew-cask
+    state: latest

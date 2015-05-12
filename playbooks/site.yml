@@ -13,9 +13,10 @@
     - imagemagick
     - ruby
     - nodejs
-    - mysql
     - postgresql
+    - mysql
     - redis
     - rethinkdb
     - heroku
     - peco
+    - atom
