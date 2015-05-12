@@ -1,0 +1,2 @@
+- name: 「Dropbox (個人)」へのシンボリックリンクを作る
+  command: ln -nfs ~/'Dropbox (個人)' ~/Dropbox
