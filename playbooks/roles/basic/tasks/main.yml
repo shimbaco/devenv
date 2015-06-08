@@ -5,3 +5,4 @@
   with_items:
     - wget
     - pkg-config # RMagickをインストールするときに必要
+    - wrk # ベンチマークツール
