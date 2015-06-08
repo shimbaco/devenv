@@ -17,7 +17,7 @@
 #   'ctrl-p': 'core:move-down'
 #
 
-'.workspace':
+'.atom-workspace':
   'cmd-p': 'command-palette:toggle'
   'ctrl-w v': 'pane:split-right'
   'ctrl-w n': 'pane:split-down'
@@ -26,7 +26,7 @@
   'ctrl-w right': 'window:focus-pane-on-right'
   'ctrl-w left': 'window:focus-pane-on-left'
 
-'.editor':
+'.atom-text-editor':
   'ctrl-{': 'editor:fold-all'
   'ctrl-}': 'editor:unfold-all'
   'ctrl-[': 'editor:fold-current-row'
