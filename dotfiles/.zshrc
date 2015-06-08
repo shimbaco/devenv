@@ -3,7 +3,6 @@ export LANG=ja_JP.UTF-8
 export LC_ALL='ja_JP.UTF-8' # aws s3 syncするときこれがないと死ぬ
 export GOPATH=$HOME/dev/golang
 export PATH=$PATH:~/bin:~/.rbenv/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/local/share/python:$GOPATH/bin:/usr/local/heroku/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin
-export USER=vagrant
 
 # rbenv
 eval "$(rbenv init -)"
