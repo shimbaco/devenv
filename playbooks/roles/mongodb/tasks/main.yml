@@ -1,0 +1,10 @@
+- name: MongoDB 2.6をインストールする
+  homebrew:
+    name:  homebrew/versions/mongodb26
+    state: present
+
+- name: ログイン後に自動的に起動する
+  shell: ln -sfv /usr/local/opt/mongodb26/*.plist ~/Library/LaunchAgents
+
+- name: 起動する
+  shell: launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb26.plist

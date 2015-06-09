@@ -17,6 +17,7 @@
     - postgresql
     - mysql
     - redis
+    - mongodb
     - rethinkdb
     - heroku
     - peco
