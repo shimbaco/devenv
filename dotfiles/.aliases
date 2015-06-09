@@ -58,6 +58,9 @@ alias ls='ls -a'
 alias m='mine .'
 alias mkdir='mkdir -p'
 
+alias nis='npm i --save'
+alias nisd='npm i --save-dev'
+
 alias pa='powder applog'
 alias pl='powder log'
 alias ps='ps aux'
