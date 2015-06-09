@@ -1,4 +1,4 @@
-export EDITOR=vim
+export EDITOR=atom
 export LANG=ja_JP.UTF-8
 export LC_ALL='ja_JP.UTF-8' # aws s3 syncするときこれがないと死ぬ
 export GOPATH=$HOME/dev/golang
