@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+# bundle list を peco って bundle open するやつ
+
+gem_name = `bundle list | peco`
+gem_name = gem_name.scan(/^  \* ([\w_]+) /).flatten.first
+
+system "bundle open #{gem_name}"

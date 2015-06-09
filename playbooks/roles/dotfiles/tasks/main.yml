@@ -27,7 +27,10 @@
     - .zsh
     - bin
 
-- name: sshmに実行権限を与える
+- name: ~/bin以下のファイルに実行権限を与える
   file:
-    path: ~/bin/sshm
+    path: ~/bin/{{ item }}
     mode: 0755
+  with_items:
+    - bof
+    - sshm
