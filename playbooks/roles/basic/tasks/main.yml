@@ -6,3 +6,4 @@
     - wget
     - pkg-config # RMagickをインストールするときに必要
     - wrk # ベンチマークツール
+    - pwgen
