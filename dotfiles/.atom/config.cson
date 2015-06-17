@@ -15,27 +15,21 @@
   editor:
     fontFamily: "Ricty Diminished"
     showIndentGuide: true
-    invisibles:
-      {}
+    invisibles: {}
     zoomFontWhenCtrlScrolling: true
     fontSize: 18
   "autocomplete-plus":
     fileBlacklist: [
       ".*"
     ]
-  "rails-transporter":
-    {}
-  "autocomplete-emojis":
-    {}
+  "rails-transporter": {}
+  "autocomplete-emojis": {}
   autosave:
     enabled: true
-  "aligner-css":
-    {}
-  "aligner-scss":
-    {}
-  "aligner-ruby":
-    {}
-  linter:
-    {}
-  react:
-    {}
+  "aligner-css": {}
+  "aligner-scss": {}
+  "aligner-ruby": {}
+  linter: {}
+  react: {}
+  "linter-eslint":
+    disableWhenNoEslintrcFileInPath: true
