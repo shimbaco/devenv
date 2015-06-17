@@ -1,6 +1,6 @@
 - name: MongoDB 2.6をインストールする
   homebrew:
-    name:  homebrew/versions/mongodb26
+    name:  mongodb26
     state: present
 
 - name: ログイン後に自動的に起動する
