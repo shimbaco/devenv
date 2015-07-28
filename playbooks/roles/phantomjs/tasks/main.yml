@@ -1,0 +1,4 @@
+- name: PhantomJSをインストールする
+  homebrew:
+    name:  homebrew/versions/phantomjs198
+    state: present
