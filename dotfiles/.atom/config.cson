@@ -17,7 +17,7 @@
     showIndentGuide: true
     invisibles: {}
     zoomFontWhenCtrlScrolling: true
-    fontSize: 18
+    fontSize: 16
   "autocomplete-plus":
     fileBlacklist: [
       ".*"
