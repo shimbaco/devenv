@@ -1,0 +1,4 @@
+- name: PhantomJSをインストールする
+  homebrew:
+    name:  phantomjs
+    state: present
