@@ -15,7 +15,7 @@
     - ruby
     - nodejs
     - postgresql
-    - mysql
+    # - mysql
     - redis
     - mongodb
     - heroku
