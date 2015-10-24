@@ -18,7 +18,6 @@
     - mysql
     - redis
     - mongodb
-    - rethinkdb
     - heroku
     - peco
     - phantomjs
