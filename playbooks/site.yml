@@ -22,4 +22,4 @@
     - heroku
     - peco
     - phantomjs
-    - atom
+    # - atom
