@@ -1,0 +1,4 @@
+- name: awscliをインストールする
+  homebrew:
+    name: awscli
+    state: present
