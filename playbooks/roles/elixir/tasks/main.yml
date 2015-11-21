@@ -1,0 +1,4 @@
+- name: Elixirをインストールする
+  homebrew:
+    name:  elixir
+    state: present
