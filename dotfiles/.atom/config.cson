@@ -17,7 +17,7 @@
     showIndentGuide: true
     invisibles: {}
     zoomFontWhenCtrlScrolling: true
-    fontSize: 18
+    fontSize: 16
   "autocomplete-plus":
     fileBlacklist: [
       ".*"
@@ -29,7 +29,11 @@
   "aligner-css": {}
   "aligner-scss": {}
   "aligner-ruby": {}
-  linter: {}
+  linter:
+    errorPanelHeight: 73
   react: {}
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
+  "linter-jshint":
+    lintInlineJavaScript: false
+    disableWhenNoJshintrcFileInPath: true
