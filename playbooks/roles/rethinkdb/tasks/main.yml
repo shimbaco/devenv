@@ -1,4 +1,0 @@
-- name: RethinkDBをインストールする
-  homebrew:
-    name:  rethinkdb
-    state: present

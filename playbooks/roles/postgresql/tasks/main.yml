@@ -1,4 +1,10 @@
-- name: PostgreSQLをインストールする
+- name: Postgres.appをインストールする
   homebrew_cask:
     name:  postgres
     state: installed
+
+# pg gemをインストールするときに必要
+- name: PostgreSQLをインストールする
+  homebrew:
+    name:  postgresql
+    state: present

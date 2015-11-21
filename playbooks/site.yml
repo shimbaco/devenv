@@ -15,10 +15,10 @@
     - ruby
     - nodejs
     - postgresql
-    - mysql
+    # - mysql
     - redis
     - mongodb
-    - rethinkdb
     - heroku
     - peco
-    - atom
+    - phantomjs
+    # - atom
