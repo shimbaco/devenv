@@ -37,3 +37,5 @@
   "linter-jshint":
     lintInlineJavaScript: false
     disableWhenNoJshintrcFileInPath: true
+  "linter-rubocop":
+    "executablePath": "~/.rbenv/shims/rubocop"
