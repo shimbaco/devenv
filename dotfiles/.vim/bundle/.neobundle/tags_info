@@ -20,5 +20,6 @@ vim-slim
 vim-stylus
 vim-tags
 vimfiler
+vimproc.vim
 vimshell
 vundle
