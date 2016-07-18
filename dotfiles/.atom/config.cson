@@ -15,10 +15,6 @@
       "atom-color-highlight"
     ]
     excludeVcsIgnoredPaths: true
-    themes: [
-      "seti-ui"
-      "base16-tomorrow-dark-theme"
-    ]
   editor:
     fontFamily: "Ricty Diminished"
     fontSize: 16
