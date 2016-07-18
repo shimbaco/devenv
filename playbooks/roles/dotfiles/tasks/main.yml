@@ -24,6 +24,7 @@
   command: ln -nfs ~/dev/shimbaco/devenv/dotfiles/{{ item }} ~/
   with_items:
     - .atom
+    - .bundle
     - .vim
     - .zsh
     - bin
