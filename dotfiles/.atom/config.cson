@@ -10,6 +10,7 @@
   autosave:
     enabled: true
   core:
+    allowPendingPaneItems: false
     audioBeep: false
     disabledPackages: [
       "atom-color-highlight"
