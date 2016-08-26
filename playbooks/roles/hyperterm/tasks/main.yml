@@ -1,0 +1,4 @@
+- name: HyperTermをインストールする
+  homebrew_cask:
+    name:  hyperterm
+    state: installed

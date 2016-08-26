@@ -21,6 +21,7 @@
     - peco
     - phantomjs
     - aws
-    # - atom
+    - atom
+    - hyperterm
     # - elixir
     # - mysql
