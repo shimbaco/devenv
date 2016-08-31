@@ -9,8 +9,3 @@
   with_items:
     - homebrew/versions
     - caskroom/cask
-
-- name: Homebrew-Caskをインストールする
-  homebrew:
-    name: brew-cask
-    state: latest
