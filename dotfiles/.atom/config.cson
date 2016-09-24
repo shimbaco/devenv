@@ -25,7 +25,7 @@
   "exception-reporting":
     userId: "ec689dd8-f8c2-3b84-6e60-82f886bee482"
   linter:
-    errorPanelHeight: 73
+    errorPanelHeight: 132
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
   "linter-jshint":
