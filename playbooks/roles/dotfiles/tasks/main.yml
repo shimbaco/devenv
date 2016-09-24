@@ -1,6 +1,6 @@
 - name: 設定ファイルを配置する
   file:
-    src:  ~/dev/shimbaco/devenv/dotfiles/{{ item }}
+    src:  ~/dev/github/shimbaco/devenv/dotfiles/{{ item }}
     path: ~/{{ item }}
     state: link
   with_items:
@@ -21,7 +21,7 @@
     - .zshrc
 
 - name: 設定ファイルを配置する (ディレクトリ)
-  command: ln -nfs ~/dev/shimbaco/devenv/dotfiles/{{ item }} ~/
+  command: ln -nfs ~/dev/github/shimbaco/devenv/dotfiles/{{ item }} ~/
   with_items:
     - .atom
     - .bundle
