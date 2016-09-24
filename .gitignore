@@ -6,3 +6,5 @@
 /dotfiles/.atom/compile-cache
 /dotfiles/.atom/packages
 /dotfiles/.atom/storage
+/dotfiles/.bundle/cache
+/dotfiles/.vim/bundle
