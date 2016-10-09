@@ -1,0 +1,6 @@
+# Zshで以下のエラーが出てしまうので、使用しないけどMercurialをインストールする
+# compinit:495: no such file or directory: /usr/local/share/zsh/site-functions/_hg
+- name: Mercurialをインストールする
+  homebrew:
+    name:  mercurial
+    state: present
