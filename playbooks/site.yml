@@ -7,6 +7,7 @@
     - homebrew
     - basic
     - go
+    - ghq
     - dropbox
     - zsh
     - dotfiles
@@ -24,5 +25,6 @@
     - aws
     - atom
     - hyperterm
+
     # - elixir
     # - mysql
