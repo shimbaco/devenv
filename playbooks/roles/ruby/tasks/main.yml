@@ -43,3 +43,8 @@
 
 - name: Foremanをインストールする
   shell: ~/.rbenv/bin/rbenv exec gem install foreman --no-ri --no-rdoc
+
+- name: gem-srcをインストールする
+  git:
+    repo: git://github.com/amatsuda/gem-src.git
+    dest: ~/.rbenv/plugins/gem-src
