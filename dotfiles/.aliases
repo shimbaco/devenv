@@ -61,6 +61,8 @@ alias mkdir='mkdir -p'
 alias nis='npm i --save'
 alias nisd='npm i --save-dev'
 
+alias og='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
+
 alias pa='powder applog'
 alias pl='powder log'
 alias ps='ps aux'

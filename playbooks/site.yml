@@ -26,6 +26,7 @@
     - atom
     - hyperterm
     - mercurial
+    - hub
 
     # - elixir
     # - mysql

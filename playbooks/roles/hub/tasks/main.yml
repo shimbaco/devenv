@@ -1,0 +1,4 @@
+- name: hubをインストールする
+  homebrew:
+    name:  hub
+    state: present
