@@ -1,0 +1,4 @@
+- name: Goをインストールする
+  homebrew:
+    name:  go
+    state: present

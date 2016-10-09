@@ -6,6 +6,7 @@
   roles:
     - homebrew
     - basic
+    - go
     - dropbox
     - zsh
     - dotfiles
