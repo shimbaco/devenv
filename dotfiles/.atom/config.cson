@@ -16,6 +16,8 @@
       "atom-color-highlight"
     ]
     excludeVcsIgnoredPaths: true
+    telemetryConsent: "limited"
+    useCustomTitleBar: true
   editor:
     fontFamily: "Ricty Diminished"
     fontSize: 16
