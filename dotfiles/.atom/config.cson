@@ -26,6 +26,8 @@
     zoomFontWhenCtrlScrolling: true
   "exception-reporting":
     userId: "ec689dd8-f8c2-3b84-6e60-82f886bee482"
+  "file-types":
+    "jb": "source.ruby"
   linter:
     errorPanelHeight: 132
   "linter-eslint":
