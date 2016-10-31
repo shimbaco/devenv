@@ -1,4 +1,4 @@
-alias a='atom-beta .'
+alias a='atom .'
 alias ap='ansible-playbook'
 alias asi='apm stars --install'
 

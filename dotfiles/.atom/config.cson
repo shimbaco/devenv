@@ -40,6 +40,8 @@
   metrics:
     userId: "ac7d9da1254a329593e491f3c946a8248950d5b8"
   "one-dark-ui": {}
+  pigments:
+    sassShadeAndTintImplementation: "bourbon"
   "rails-transporter": {}
   react: {}
   welcome:
