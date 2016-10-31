@@ -1,4 +1,4 @@
 - name: Atomをインストールする
   homebrew_cask:
-    name:  atom
+    name: atom
     state: installed
