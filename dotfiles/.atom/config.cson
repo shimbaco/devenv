@@ -20,7 +20,6 @@
     useCustomTitleBar: true
   editor:
     fontFamily: "Ricty Diminished"
-    fontSize: 16
     invisibles: {}
     showIndentGuide: true
     zoomFontWhenCtrlScrolling: true
