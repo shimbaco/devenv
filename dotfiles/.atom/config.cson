@@ -14,12 +14,14 @@
     audioBeep: false
     disabledPackages: [
       "atom-color-highlight"
+      "symbol-gen"
     ]
     excludeVcsIgnoredPaths: true
     telemetryConsent: "limited"
     useCustomTitleBar: true
   editor:
     fontFamily: "Ricty Diminished"
+    fontSize: 13
     invisibles: {}
     showIndentGuide: true
     zoomFontWhenCtrlScrolling: true
