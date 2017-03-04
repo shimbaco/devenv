@@ -29,7 +29,7 @@ alias bs5='bundle exec rails s -p 3005'
 alias bu='bundle update'
 
 alias cdg='cd -g'
-alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
+alias ctags="`brew --prefix`/bin/ctags"
 
 # alias done='echo "display notification \"Done!\" with title \"Command Execution\"" | osascript'
 

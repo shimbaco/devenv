@@ -1,0 +1,4 @@
+- name: ctagsをインストールする
+  homebrew:
+    name:  ctags
+    state: present

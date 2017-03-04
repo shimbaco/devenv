@@ -8,6 +8,7 @@
     - basic
     - go
     - ghq
+    - ctags
     - dropbox
     - zsh
     - dotfiles
