@@ -14,13 +14,16 @@
     audioBeep: false
     disabledPackages: [
       "atom-color-highlight"
+      "autocomplete-go"
+      "gorename"
+      "gometalinter-linter"
     ]
     excludeVcsIgnoredPaths: true
     telemetryConsent: "limited"
     useCustomTitleBar: true
   editor:
     fontFamily: "Ricty Diminished"
-    fontSize: 20
+    fontSize: 16
     invisibles: {}
     showIndentGuide: true
     zoomFontWhenCtrlScrolling: true
@@ -28,6 +31,7 @@
     userId: "ec689dd8-f8c2-3b84-6e60-82f886bee482"
   "file-types":
     jb: "source.ruby"
+    mjml: "text.html.erb"
   "go-plus":
     panelDisplayMode: "closed"
   linter:

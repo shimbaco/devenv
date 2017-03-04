@@ -5,13 +5,15 @@ export LC_CTYPE='ja_JP.UTF-8' # rubocopで `invalid byte sequence in US-ASCII` �
 export GOPATH=$HOME/dev/golang
 export PATH=$PATH:~/bin:~/.rbenv/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/local/share/python:$GOPATH/bin:/usr/local/heroku/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin:~/.yarn/bin
 export ENHANCD_FILTER=peco
+# https://github.com/golang/go/issues/17182
+export GOROOT_BOOTSTRAP=$GOROOT
 
 # rbenv
 eval "$(rbenv init -)"
 
 # nvm
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
 
 # プロンプトの表示形式
 # http://news.mynavi.jp/column/zsh/002/index.html
