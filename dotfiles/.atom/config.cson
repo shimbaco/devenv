@@ -2,6 +2,8 @@
   "aligner-css": {}
   "aligner-ruby": {}
   "aligner-scss": {}
+  "atom-ctags":
+    cmdArgs: "--exclude=.git --exclude=log * --exclude=node_modules/*"
   "autocomplete-emojis": {}
   "autocomplete-plus":
     fileBlacklist: [
@@ -17,13 +19,24 @@
       "autocomplete-go"
       "gorename"
       "gometalinter-linter"
+      "symbols-view"
     ]
     excludeVcsIgnoredPaths: true
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "desktop.ini"
+      ".tags"
+      "tags"
+    ]
     telemetryConsent: "limited"
     useCustomTitleBar: true
   editor:
     fontFamily: "Ricty Diminished"
-    fontSize: 16
     invisibles: {}
     showIndentGuide: true
     zoomFontWhenCtrlScrolling: true
@@ -41,6 +54,8 @@
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
     lintInlineJavaScript: false
+  "linter-ui-default":
+    showPanel: true
   metrics:
     userId: "ac7d9da1254a329593e491f3c946a8248950d5b8"
   "one-dark-ui": {}

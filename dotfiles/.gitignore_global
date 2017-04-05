@@ -1,6 +1,6 @@
 *.log
-
 .DS_Store
 .tags
+.tags_swap
 
 /tags
