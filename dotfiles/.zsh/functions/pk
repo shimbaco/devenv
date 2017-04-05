@@ -1,0 +1,9 @@
+# pecoでkill
+function pk() {
+  for pid in `ps | peco | awk '{ print $2 }'`
+  do
+    kill $pid
+    echo "Killed ${pid}"
+  done
+}
+
