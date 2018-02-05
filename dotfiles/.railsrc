@@ -1,1 +1,1 @@
---skip-bundle -d postgresql -T
+--skip-bundle --skip-coffee --skip-sprockets --webpack -d postgresql -T
