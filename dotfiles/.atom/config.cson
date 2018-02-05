@@ -4,6 +4,8 @@
   "aligner-scss": {}
   "atom-ctags":
     cmdArgs: "--exclude=.git --exclude=log * --exclude=node_modules/*"
+  "atom-package-deps":
+    ignored: []
   "autocomplete-emojis": {}
   "autocomplete-plus":
     fileBlacklist: [
@@ -20,6 +22,7 @@
       "gorename"
       "gometalinter-linter"
       "symbols-view"
+      "linter-coffeelint"
     ]
     excludeVcsIgnoredPaths: true
     ignoredNames: [
@@ -34,10 +37,16 @@
       "tags"
     ]
     telemetryConsent: "limited"
-    useCustomTitleBar: true
+    themes: [
+      "one-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+    titleBar: "custom"
   editor:
-    fontFamily: "Ricty Diminished"
+    fontFamily: "Cica"
+    fontSize: 15
     invisibles: {}
+    preferredLineLength: 120
     showIndentGuide: true
     zoomFontWhenCtrlScrolling: true
   "exception-reporting":
@@ -47,20 +56,29 @@
     mjml: "text.html.erb"
   "go-plus":
     panelDisplayMode: "closed"
-  linter:
-    errorPanelHeight: 132
+  linter: {}
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
     lintInlineJavaScript: false
+  "linter-pug": {}
   "linter-ui-default":
+    panelHeight: 69
     showPanel: true
   metrics:
     userId: "ac7d9da1254a329593e491f3c946a8248950d5b8"
   "one-dark-ui": {}
   pigments:
     sassShadeAndTintImplementation: "bourbon"
+  "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+      isDisabledIfNoConfigFile: true
+      isDisabledIfNotInPackageJson: true
+      showInStatusBar: true
+    prettierOptions:
+      singleQuote: true
   "rails-transporter": {}
   react: {}
   welcome:
