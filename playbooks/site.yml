@@ -25,9 +25,9 @@
     - phantomjs
     - aws
     - atom
-    - hyperterm
     - mercurial
     - hub
 
     # - elixir
     # - mysql
+    # - hyperterm
