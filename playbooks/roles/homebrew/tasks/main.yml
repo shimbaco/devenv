@@ -7,5 +7,4 @@
     tap: '{{ item }}'
     state: present
   with_items:
-    - homebrew/versions
     - caskroom/cask
