@@ -16,6 +16,18 @@
   core:
     allowPendingPaneItems: false
     audioBeep: false
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".hgrc"
+        ".flowconfig"
+      ]
+      "source.json": [
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
     disabledPackages: [
       "atom-color-highlight"
       "autocomplete-go"
@@ -44,10 +56,9 @@
     titleBar: "custom"
   editor:
     fontFamily: "Cica"
-    fontSize: 15
+    fontSize: 17
     invisibles: {}
     preferredLineLength: 120
-    showIndentGuide: true
     zoomFontWhenCtrlScrolling: true
   "exception-reporting":
     userId: "ec689dd8-f8c2-3b84-6e60-82f886bee482"
@@ -79,6 +90,7 @@
       showInStatusBar: true
     prettierOptions:
       singleQuote: true
+    useEslint: true
   "rails-transporter": {}
   react: {}
   welcome:

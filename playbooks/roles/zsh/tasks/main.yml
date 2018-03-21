@@ -7,7 +7,7 @@
   lineinfile:
     dest: /etc/shells
     line: /usr/local/bin/zsh
-  sudo: yes
+  become: yes
 
 - name: 使用するシェルをzshにする
   command: chsh -s /usr/local/bin/zsh

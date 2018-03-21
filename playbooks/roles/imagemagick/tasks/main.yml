@@ -1,4 +1,5 @@
-- name: ImageMagickをインストールする
+# ImageMagick 7系だとrmagick 2.16.0がインストールできなかったので6系をインストールする
+- name: ImageMagick 6をインストールする
   homebrew:
-    name:  imagemagick
+    name:  imagemagick@6
     state: present

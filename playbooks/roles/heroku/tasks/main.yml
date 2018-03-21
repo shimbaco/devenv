@@ -2,3 +2,6 @@
   homebrew:
     name:  heroku-toolbelt
     state: present
+
+- name: Install heroku-accounts
+  command: heroku plugins:install heroku-accounts

@@ -1,0 +1,4 @@
+- name: Graphiqlをインストールする
+  homebrew_cask:
+    name:  graphiql
+    state: installed

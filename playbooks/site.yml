@@ -9,7 +9,6 @@
     - go
     - ghq
     - ctags
-    - dropbox
     - zsh
     - dotfiles
     - ssh
@@ -27,7 +26,9 @@
     - atom
     - mercurial
     - hub
+    - graphiql
 
     # - elixir
     # - mysql
     # - hyperterm
+    # - dropbox
