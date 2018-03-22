@@ -44,7 +44,7 @@
     titleBar: "custom"
   editor:
     fontFamily: "Cica"
-    fontSize: 15
+    fontSize: 16
     invisibles: {}
     preferredLineLength: 120
     showIndentGuide: true
@@ -79,6 +79,7 @@
       showInStatusBar: true
     prettierOptions:
       singleQuote: true
+    useEslint: true
   "rails-transporter": {}
   react: {}
   welcome:
