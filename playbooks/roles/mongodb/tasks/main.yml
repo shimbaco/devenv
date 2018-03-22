@@ -1,10 +1,9 @@
-- name: MongoDB 2.6をインストールする
+- name: MongoDB 3.0.xをインストールする
   homebrew:
-    name:  mongodb26
+    name:  mongodb@3.0
     state: present
 
-- name: ログイン後に自動的に起動する
-  shell: ln -sfv /usr/local/opt/mongodb26/*.plist ~/Library/LaunchAgents
-
-- name: 起動する
-  shell: launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb26.plist
+# To have launchd start mongodb@3.0 now and restart at login:
+#   brew services start mongodb@3.0
+# Or, if you don't want/need a background service you can just run:
+#   mongod --config /usr/local/etc/mongod.conf

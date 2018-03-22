@@ -2,11 +2,22 @@ export EDITOR=atom
 export LANG=ja_JP.UTF-8
 export LC_ALL='ja_JP.UTF-8' # aws s3 syncするときこれがないと死ぬ
 export LC_CTYPE='ja_JP.UTF-8' # rubocopで `invalid byte sequence in US-ASCII` というエラーが出ないようにする
-export GOPATH=$HOME/dev/golang
-export PATH=$PATH:~/bin:~/.rbenv/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/local/share/python:$GOPATH/bin:/usr/local/heroku/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin:~/.yarn/bin
+export GOPATH=$HOME/dev/go
+export PATH=$PATH:~/bin
+export PATH=$PATH:~/.rbenv/bin
+export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/usr/local/share/npm/bin
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/local/heroku/bin
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
+export PATH=$PATH:~/.yarn/bin
+export PATH=$PATH:/usr/local/opt/mongodb@3.0/bin
+export PATH=$PATH:/usr/local/opt/imagemagick@6/bin
+export PATH=$PATH:/usr/local/opt/go@1.9/bin
 export ENHANCD_FILTER=peco
 # https://github.com/golang/go/issues/17182
 export GOROOT_BOOTSTRAP=$GOROOT
+export PKG_CONFIG_PATH=/usr/local/opt/imagemagick@6/lib/pkgconfig
 
 # rbenv
 eval "$(rbenv init -)"
@@ -17,7 +28,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # プロンプトの表示形式
 # http://news.mynavi.jp/column/zsh/002/index.html
-PROMPT="%m:%n$ "
+PROMPT="%n@%* $ "
 RPROMPT="[%~]"
 SPROMPT="correct: %R -> %r ? "
 
@@ -86,3 +97,9 @@ done
 
 # enhancd
 source ~/dev/github.com/b4b4r07/enhancd/init.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/shimbaco/Dropbox/programming/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/shimbaco/Dropbox/programming/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/shimbaco/Dropbox/programming/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/shimbaco/Dropbox/programming/google-cloud-sdk/completion.zsh.inc'; fi

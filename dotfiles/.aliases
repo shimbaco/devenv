@@ -28,6 +28,7 @@ alias bs4='bundle exec rails s -p 3004'
 alias bs5='bundle exec rails s -p 3005'
 alias bu='bundle update'
 
+alias c='code .'
 alias cdg='cd -g'
 alias ctags="`brew --prefix`/bin/ctags"
 
