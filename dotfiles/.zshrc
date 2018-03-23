@@ -2,7 +2,7 @@ export EDITOR=atom
 export LANG=ja_JP.UTF-8
 export LC_ALL='ja_JP.UTF-8' # aws s3 syncするときこれがないと死ぬ
 export LC_CTYPE='ja_JP.UTF-8' # rubocopで `invalid byte sequence in US-ASCII` というエラーが出ないようにする
-export GOPATH=$HOME/dev/go
+export GOPATH=$HOME/dev
 export PATH=$PATH:~/bin
 export PATH=$PATH:~/.rbenv/bin
 export PATH=$PATH:/usr/local/bin
@@ -96,7 +96,7 @@ for function in ~/.zsh/functions/*; do
 done
 
 # enhancd
-source ~/dev/github.com/b4b4r07/enhancd/init.sh
+source ~/dev/src/github.com/b4b4r07/enhancd/init.sh
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/shimbaco/Dropbox/programming/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/shimbaco/Dropbox/programming/google-cloud-sdk/path.zsh.inc'; fi
