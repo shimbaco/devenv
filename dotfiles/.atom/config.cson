@@ -47,7 +47,6 @@
     fontSize: 16
     invisibles: {}
     preferredLineLength: 120
-    showIndentGuide: true
     zoomFontWhenCtrlScrolling: true
   "exception-reporting":
     userId: "ec689dd8-f8c2-3b84-6e60-82f886bee482"
