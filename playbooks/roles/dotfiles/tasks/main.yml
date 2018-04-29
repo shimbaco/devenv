@@ -11,7 +11,7 @@
     - .gitconfig
     - .gitignore_global
     - .gvimrc
-    - .hyperterm.js
+    - .hyper.js
     - .pryrc
     - .railsrc
     - .spring.rb
