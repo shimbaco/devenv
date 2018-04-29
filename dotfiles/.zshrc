@@ -1,4 +1,4 @@
-export EDITOR=atom
+export EDITOR=code
 export LANG=ja_JP.UTF-8
 export LC_ALL='ja_JP.UTF-8' # aws s3 syncするときこれがないと死ぬ
 export LC_CTYPE='ja_JP.UTF-8' # rubocopで `invalid byte sequence in US-ASCII` というエラーが出ないようにする
@@ -39,7 +39,7 @@ SPROMPT="correct: %R -> %r ? "
 #[[ -f ~/.autojump/etc/profile.d/autojump.zsh ]] && source ~/.autojump/etc/profile.d/autojump.zsh
 
 # 補完機能の初期化
-autoload -U compinit
+autoload -Uz compinit
 compinit
 
 # Viライクキーバインド設定
@@ -105,3 +105,7 @@ if [ -f '/Users/shimbaco/Dropbox/programming/google-cloud-sdk/path.zsh.inc' ]; t
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/shimbaco/Dropbox/programming/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/shimbaco/Dropbox/programming/google-cloud-sdk/completion.zsh.inc'; fi
+
+# asdf
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
