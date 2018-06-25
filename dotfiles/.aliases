@@ -27,6 +27,7 @@ alias bs3='bundle exec rails s -p 3003'
 alias bs4='bundle exec rails s -p 3004'
 alias bs5='bundle exec rails s -p 3005'
 alias bu='bundle update'
+alias bus='bundle update --source'
 
 alias c='code .'
 alias cdg='cd -g'
