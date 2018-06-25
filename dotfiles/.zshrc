@@ -16,6 +16,7 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
 export PATH=$PATH:/usr/local/opt/mongodb@3.0/bin
 export PATH=$PATH:/usr/local/opt/imagemagick@6/bin
 export PATH=$PATH:/usr/local/opt/go@1.9/bin
+export PATH=$PATH:/usr/local/opt/coreutils/libexec/gnubin
 export ENHANCD_FILTER=peco
 # https://github.com/golang/go/issues/17182
 export GOROOT_BOOTSTRAP=$GOROOT
