@@ -1,6 +1,6 @@
 {
   "files.autoSave": "onWindowChange",
-  "editor.fontSize": 16,
+  "editor.fontSize": 18,
   "editor.fontFamily": "Cica, Menlo, Monaco, 'Courier New', monospace",
   "editor.tabSize": 2,
   "workbench.colorTheme": "One Dark Pro Vivid",
@@ -11,5 +11,6 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.startupEditor": "newUntitledFile",
-  "files.insertFinalNewline": true
+  "files.insertFinalNewline": true,
+  "window.zoomLevel": 0
 }
