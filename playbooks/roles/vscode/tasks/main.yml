@@ -1,0 +1,9 @@
+- name: Copy setting files
+  file:
+    src:  ~/dev/src/github.com/shimbaco/devenv/application_support/Code/User/{{ item }}
+    path: ~/Library/Application\ Support/Code/User/{{ item }}
+    state: link
+  with_items:
+    - keybindings.json
+    - locale.json
+    - settings.json
