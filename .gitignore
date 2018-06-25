@@ -8,4 +8,4 @@
 /dotfiles/.atom/storage
 /dotfiles/.bundle/cache
 /dotfiles/.vim/bundle
-/dotfiles/.vscode/extensions
+/dotfiles/bin/ssh2ec2

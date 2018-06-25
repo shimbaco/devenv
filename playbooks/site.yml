@@ -23,11 +23,12 @@
     - peco
     - phantomjs
     - aws
-    - atom
     - mercurial
     - hub
     - graphiql
+    - vscode
 
+    # - atom
     # - elixir
     # - mysql
     # - hyperterm
