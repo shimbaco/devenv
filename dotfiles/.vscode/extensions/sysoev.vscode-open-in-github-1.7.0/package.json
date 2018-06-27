@@ -1,0 +1,96 @@
+{
+	"name": "vscode-open-in-github",
+	"displayName": "Open In GitHub",
+	"description": "Provides commands to quickly view the current file on GitHub.",
+	"version": "1.7.0",
+	"publisher": "sysoev",
+	"engines": {
+		"vscode": "^1.18.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"multi-root ready",
+		"vscode",
+		"github",
+		"bitbucket",
+		"git"
+	],
+	"homepage": "https://github.com/d4rkr00t/vscode-open-in-github",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/d4rkr00t/vscode-open-in-github.git"
+	},
+	"bugs": "https://github.com/d4rkr00t/vscode-open-in-github/issues",
+	"main": "./out/src/extension",
+	"icon": "assets/icon.jpg",
+	"activationEvents": [
+		"onCommand:openInGithub.openInGitHubFile",
+		"onCommand:openInGithub.openInGitHubBlame",
+		"onCommand:openInGithub.openInGitHubHistory"
+	],
+	"contributes": {
+		"commands": [
+			{
+				"command": "openInGithub.openInGitHubFile",
+				"title": "Open In GitHub: File"
+			},
+			{
+				"command": "openInGithub.openInGitHubBlame",
+				"title": "Open In GitHub: Blame"
+			},
+			{
+				"command": "openInGithub.openInGitHubHistory",
+				"title": "Open In GitHub: History"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Which branch is default in repository.",
+			"properties": {
+				"openInGitHub.defaultBranch": {
+					"scope": "resource",
+					"type": "string",
+					"default": "master",
+					"description": "Controls which branch will be treated as default."
+				},
+				"openInGitHub.defaultRemote": {
+					"scope": "resource",
+					"type": "string",
+					"default": "origin",
+					"description": "Controls which remote will be treated as default."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "./node_modules/.bin/tsc -p ./",
+		"compile": "tsc -watch -p ./",
+		"build": "tsc -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.32",
+		"@types/node": "^6.0.45",
+		"@types/ramda": "0.0.2",
+		"commitizen": "^2.8.1",
+		"cz-conventional-changelog": "^1.1.6",
+		"typescript": "^2.0.3",
+		"vscode": "^1.0.0"
+	},
+	"config": {
+		"commitizen": {
+			"path": "cz-conventional-changelog"
+		}
+	},
+	"dependencies": {
+		"opn": "^4.0.2",
+		"ramda": "^0.22.1"
+	},
+	"__metadata": {
+		"id": "b70cf6bc-1796-4191-bcfc-abeb77997ea7",
+		"publisherId": "c0885fa3-3b61-4f83-b035-0d441817979b",
+		"publisherDisplayName": "sysoev"
+	}
+}
