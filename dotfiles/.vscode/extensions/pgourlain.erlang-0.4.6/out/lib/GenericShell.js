@@ -1,0 +1,145 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const child_process_1 = require("child_process");
+const events_1 = require("events");
+//inspired from https://github.com/WebFreak001/code-debug/blob/master/src/backend/mi2/mi2.ts for inspiration of an EventEmitter 
+const nonOutput = /^(?:\d*|undefined)[\*\+\=]|[\~\@\&\^]/;
+function couldBeOutput(line) {
+    if (nonOutput.exec(line))
+        return false;
+    return true;
+}
+class ErlGenericShell extends events_1.EventEmitter {
+    constructor(whichOutput) {
+        super();
+        this.buffer = "";
+        this.errbuf = "";
+        this.erlangPath = null;
+        this.channelOutput = whichOutput;
+    }
+    RunProcess(processName, startDir, args) {
+        return new Promise((resolve, reject) => {
+            this.LaunchProcess(processName, startDir, args).then(started => {
+                this.on('close', (exitCode) => {
+                    if (exitCode == 0) {
+                        resolve(0);
+                    }
+                    else {
+                        reject(exitCode);
+                    }
+                });
+            });
+        });
+    }
+    LaunchProcess(processName, startDir, args, quiet = false) {
+        return new Promise((resolve, reject) => {
+            try {
+                var channel = this.channelOutput;
+                if (this.channelOutput) {
+                    channel.show();
+                }
+                if (!quiet) {
+                    if (this.erlangPath) {
+                        this.log("log", `using erlang binaries from path : '${this.erlangPath}'`);
+                    }
+                    this.log("log", `starting : ${processName} \r\n` + args.join(" "));
+                }
+                var childEnv = null;
+                if (this.erlangPath) {
+                    childEnv = process.env;
+                    childEnv.PATH = this.erlangPath + ";" + childEnv.PATH;
+                }
+                this.erlangShell = child_process_1.spawn(processName, args, { cwd: startDir, shell: true, stdio: 'pipe', env: childEnv });
+                this.erlangShell.on('error', error => {
+                    this.log("stderr", error.message);
+                    if (process.platform == 'win32') {
+                        this.log("stderr", "ensure '" + processName + "' is in your path.");
+                    }
+                });
+                this.erlangShell.stdout.on("data", this.stdout.bind(this));
+                this.erlangShell.stderr.on("data", this.stderr.bind(this));
+                this.erlangShell.on('close', (exitCode) => {
+                    this.log("log", processName + ' exit code:' + exitCode);
+                    this.emit('close', exitCode);
+                });
+                this.erlangShell.on('exit', (exitCode, signal) => {
+                    this.log("log", processName + ' exit code:' + exitCode);
+                    this.emit('close', exitCode);
+                });
+                resolve(true);
+            }
+            catch (error) {
+                reject(error);
+            }
+        });
+    }
+    onOutput(lines) {
+        lines = lines.split('\n');
+        lines.forEach(line => {
+            this.log("stdout", line);
+        });
+    }
+    onOutputPartial(line) {
+        if (couldBeOutput(line)) {
+            this.logNoNewLine("stdout", line);
+            return true;
+        }
+        return false;
+    }
+    stdout(data) {
+        if (typeof data == "string")
+            this.buffer += data;
+        else
+            this.buffer += data.toString("utf8");
+        let end = this.buffer.lastIndexOf('\n');
+        if (end != -1) {
+            this.onOutput(this.buffer.substr(0, end));
+            this.buffer = this.buffer.substr(end + 1);
+        }
+        if (this.buffer.length) {
+            if (this.onOutputPartial(this.buffer)) {
+                this.buffer = "";
+            }
+        }
+    }
+    stderr(data) {
+        if (typeof data == "string")
+            this.errbuf += data;
+        else
+            this.errbuf += data.toString("utf8");
+        let end = this.errbuf.lastIndexOf('\n');
+        if (end != -1) {
+            this.onOutputStderr(this.errbuf.substr(0, end));
+            this.errbuf = this.errbuf.substr(end + 1);
+        }
+        if (this.errbuf.length) {
+            this.logNoNewLine("stderr", this.errbuf);
+            this.errbuf = "";
+        }
+    }
+    onOutputStderr(lines) {
+        lines = lines.split('\n');
+        lines.forEach(line => {
+            this.log("stderr", line);
+        });
+    }
+    logNoNewLine(type, msg) {
+        if (this.channelOutput) {
+            this.channelOutput.appendLine(msg);
+        }
+        this.emit("msg", type, msg);
+    }
+    log(type, msg) {
+        if (this.channelOutput) {
+            this.channelOutput.appendLine(msg);
+        }
+        this.emit("msg", type, msg[msg.length - 1] == '\n' ? msg : (msg + "\n"));
+    }
+    Send(what) {
+        this.log("log", what);
+        this.erlangShell.stdin.write(what);
+        this.erlangShell.stdin.write("\r\n");
+    }
+}
+exports.ErlGenericShell = ErlGenericShell;
+//# sourceMappingURL=GenericShell.js.map
