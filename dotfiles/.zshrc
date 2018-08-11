@@ -115,3 +115,5 @@ if [ -f '/Users/shimbaco/Dropbox/programming/google-cloud-sdk/completion.zsh.inc
 . $HOME/.asdf/completions/asdf.bash
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
+
+autoload -Uz add-zsh-hook
