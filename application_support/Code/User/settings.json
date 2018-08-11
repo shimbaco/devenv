@@ -23,5 +23,6 @@
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.startupEditor": "newUntitledFile",
   "files.insertFinalNewline": true,
-  "window.zoomLevel": 0
+  "window.zoomLevel": 0,
+  "ruby.intellisense": false
 }
