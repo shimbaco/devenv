@@ -63,7 +63,7 @@ setopt auto_cd
 chpwd_functions=($chpwd_functions dirs)
 
 # ヒストリを保存するファイル
-HISTFILE=~/Dropbox/devenv/dotfiles/.zsh_history
+HISTFILE=~/Documents/devenv/dotfiles/.zsh_history
 
 # メモリ上のヒストリ数
 # 大きな数を指定してすべてのヒストリを保存するようにしている
@@ -104,14 +104,14 @@ done
 # enhancd
 source ~/dev/src/github.com/b4b4r07/enhancd/init.sh
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/shimbaco/Dropbox/programming/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/shimbaco/Dropbox/programming/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/shimbaco/Dropbox/programming/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/shimbaco/Dropbox/programming/google-cloud-sdk/completion.zsh.inc'; fi
-
 # asdf
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/shimbaco/dev/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/shimbaco/dev/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/shimbaco/dev/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/shimbaco/dev/google-cloud-sdk/completion.zsh.inc'; fi

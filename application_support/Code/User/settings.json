@@ -19,6 +19,9 @@
     "files.insertFinalNewline": true,
     "editor.formatOnSave": true
   },
+  "[reason]": {
+    "editor.formatOnSave": true
+  },
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.startupEditor": "newUntitledFile",
