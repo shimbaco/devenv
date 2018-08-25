@@ -7,8 +7,3 @@
     - keybindings.json
     - locale.json
     - settings.json
-
-- name: Copy setting directories
-  command: ln -nfs ~/dev/src/github.com/shimbaco/devenv/dotfiles/{{ item }} ~/
-  with_items:
-    - .vscode
