@@ -1,5 +1,5 @@
 #!/bin/sh
 
-cat ~/Dropbox/devenv/dotfiles/.ssh/config.d/* > ~/.ssh/config
+cat ~/Documents/devenv/dotfiles/.ssh/config.d/* > ~/.ssh/config
 
 ssh $1

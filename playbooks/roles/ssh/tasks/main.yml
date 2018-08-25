@@ -1,5 +1,5 @@
 - name: configファイルの素を設置する
   file:
-    src:   ~/Dropbox/devenv/dotfiles/.ssh/config.d
+    src:   ~/Documents/devenv/dotfiles/.ssh/config.d
     dest:  ~/.ssh/config.d
     state: link
