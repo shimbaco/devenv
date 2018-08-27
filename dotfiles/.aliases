@@ -1,4 +1,5 @@
 alias a='atom .'
+alias ame='amesh'
 alias ap='ansible-playbook'
 alias asi='apm stars --install'
 
