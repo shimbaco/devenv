@@ -111,7 +111,7 @@ export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/shimbaco/dev/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/shimbaco/dev/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/shimbaco/dev/lib/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/shimbaco/dev/lib/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/shimbaco/dev/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/shimbaco/dev/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/shimbaco/dev/lib/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/shimbaco/dev/lib/google-cloud-sdk/completion.zsh.inc'; fi
