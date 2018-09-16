@@ -3,12 +3,14 @@ export LANG=ja_JP.UTF-8
 export LC_ALL='ja_JP.UTF-8' # aws s3 syncするときこれがないと死ぬ
 export LC_CTYPE='ja_JP.UTF-8' # rubocopで `invalid byte sequence in US-ASCII` というエラーが出ないようにする
 export GOBIN=$PWD/bin
+export GOENV_ROOT=$HOME/.goenv
 export GOPATH=$HOME/dev
 export PATH=$PATH:$GOBIN
 export PATH=$PATH:~/bin
 export PATH=$PATH:~/.rbenv/bin
-export PATH=$PATH:~/.yarn/bin
+export PATH=$PATH:$GOENV_ROOT/shims
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:~/.yarn/bin
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/usr/local/share/npm/bin
 export PATH=$PATH:/usr/local/heroku/bin
@@ -27,6 +29,9 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Hom
 
 # rbenv
 eval "$(rbenv init -)"
+
+# goenv
+eval "$(goenv init -)"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
