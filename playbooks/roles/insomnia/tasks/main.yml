@@ -1,0 +1,4 @@
+- name: Install Insomnia
+  homebrew_cask:
+    name:  insomnia
+    state: installed
