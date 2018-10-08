@@ -34,7 +34,8 @@ alias c='code .'
 alias cdg='cd -g'
 alias ctags="`brew --prefix`/bin/ctags"
 
-# alias done='echo "display notification \"Done!\" with title \"Command Execution\"" | osascript'
+alias dc='docker container'
+alias di='docker image'
 
 alias fs='foreman s'
 alias fs1='foreman s -p 5001'
