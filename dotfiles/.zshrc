@@ -27,6 +27,13 @@ export GOROOT_BOOTSTRAP=$GOROOT
 export PKG_CONFIG_PATH=/usr/local/opt/imagemagick@6/lib/pkgconfig
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home
 
+
+precmd() {
+  # Sets the tab title to current dir
+  # https://gist.github.com/phette23/5270658
+  echo -ne "\e]1;${PWD##*/}\a"
+}
+
 # rbenv
 eval "$(rbenv init -)"
 
