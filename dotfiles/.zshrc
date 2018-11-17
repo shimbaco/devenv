@@ -24,7 +24,7 @@ export ENHANCD_FILTER=peco
 # https://github.com/golang/go/issues/17182
 export GOROOT_BOOTSTRAP=$GOROOT
 # Lucky
-export PKG_CONFIG_PATH=/usr/local/opt/imagemagick@6/lib/pkgconfig
+export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home
 # Docker
 export DOCKER_BUILDKIT=1
