@@ -8,6 +8,7 @@ export GOPATH=$HOME/dev
 export PATH=$PATH:$GOBIN
 export PATH=$PATH:~/bin
 export PATH=$PATH:~/.rbenv/bin
+export PATH=$PATH:~/.deno/bin
 export PATH=$PATH:$GOENV_ROOT/shims
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:~/.yarn/bin
