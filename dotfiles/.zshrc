@@ -78,7 +78,7 @@ setopt auto_cd
 chpwd_functions=($chpwd_functions dirs)
 
 # ヒストリを保存するファイル
-HISTFILE=~/Documents/devenv/dotfiles/.zsh_history
+HISTFILE=~/docs/devenv/dotfiles/.zsh_history
 
 # メモリ上のヒストリ数
 # 大きな数を指定してすべてのヒストリを保存するようにしている
