@@ -50,7 +50,7 @@ export NVM_DIR="$HOME/.nvm"
 # プロンプトの表示形式
 # http://news.mynavi.jp/column/zsh/002/index.html
 PROMPT="%n@%* $ "
-RPROMPT="[%~]"
+#RPROMPT="[%~]"
 SPROMPT="correct: %R -> %r ? "
 
 # AUTOJUMP
