@@ -1,5 +1,5 @@
 #!/bin/sh
 
-cat ~/Documents/devenv/dotfiles/.ssh/config.d/* > ~/.ssh/config
+cat ~/Drive/devenv/dotfiles/.ssh/config.d/* > ~/.ssh/config
 
 ssh $1
