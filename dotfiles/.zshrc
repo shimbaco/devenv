@@ -39,12 +39,10 @@ precmd() {
 # rbenv
 eval "$(rbenv init -)"
 
-# goenv
-eval "$(goenv init -)"
-
 # nvm
 export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # プロンプトの表示形式
 # http://news.mynavi.jp/column/zsh/002/index.html
@@ -114,9 +112,6 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 for function in ~/.zsh/functions/*; do
   source $function
 done
-
-# enhancd
-source ~/dev/src/github.com/b4b4r07/enhancd/init.sh
 
 # asdf
 . $HOME/.asdf/asdf.sh

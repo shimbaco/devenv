@@ -4,12 +4,14 @@
   gather_facts: no
   connection: local
   roles:
-    # - basic
-    # - dotfiles
-    # - ssh
-    # - direnv
-    # - ruby
-    # - postgresql
+    - basic
+    - dotfiles
+    - ssh
+    - direnv
+    - asdf
+    - ruby
+    - nodejs
+    - postgresql
     - peco
     - aws
     - graphiql
@@ -29,7 +31,6 @@
     # - mercurial
     # - mongodb
     # - mysql
-    # - nodejs
     # - phantomjs
     # - redis
     # - zsh
