@@ -7,7 +7,9 @@
     - basic
     - dotfiles
     - ssh
+    - homebrew
     - direnv
+    - heroku
     - asdf
     - ruby
     - nodejs
@@ -22,9 +24,7 @@
     # - elixir
     # - ghq
     # - go
-    # - homebrew
     # - hub
-    # - heroku
     # - hyperterm
     # - imagemagick
     # - insomnia
