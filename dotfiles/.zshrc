@@ -8,7 +8,6 @@ export GOPATH=$HOME/dev
 export PATH=$PATH:$GOBIN
 export PATH=$PATH:~/bin
 export PATH=$PATH:~/.rbenv/bin
-export PATH=$PATH:~/.deno/bin
 export PATH=$PATH:$GOENV_ROOT/shims
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:~/.yarn/bin
@@ -126,7 +125,7 @@ export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/shimbaco/dev/lib/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/shimbaco/dev/lib/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/usr/local/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/shimbaco/dev/lib/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/shimbaco/dev/lib/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/usr/local/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/google-cloud-sdk/completion.zsh.inc'; fi
