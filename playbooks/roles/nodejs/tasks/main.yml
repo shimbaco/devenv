@@ -10,6 +10,3 @@
 
 - name: Copy nvm-exec to NVM's working directory
   command: cp /usr/local/opt/nvm/nvm-exec ~/.nvm/
-
-- name: Node.jsをインストールする
-  shell: source ~/.zshrc && nvm install {{ node_version }}

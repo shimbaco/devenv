@@ -31,7 +31,7 @@ alias bu='bundle update'
 alias bus='bundle update --source'
 
 alias c='code .'
-alias cdg='cd -g'
+alias cdg='cd $(ghq list -p | peco)'
 alias ctags="`brew --prefix`/bin/ctags"
 
 alias dc='docker container'

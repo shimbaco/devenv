@@ -4,33 +4,33 @@
   gather_facts: no
   connection: local
   roles:
-    - homebrew
     - basic
-    - go
-    - ghq
-    - ctags
-    - zsh
     - dotfiles
     - ssh
+    - homebrew
     - direnv
-    - imagemagick
+    - heroku
+    - asdf
     - ruby
     - nodejs
     - postgresql
-    - redis
-    - mongodb
-    - heroku
-    - insomnia
     - peco
-    - phantomjs
     - aws
-    - mercurial
-    - hub
     - graphiql
-    - vscode
 
     # - atom
-    # - elixir
-    # - mysql
-    # - hyperterm
+    # - ctags
     # - dropbox
+    # - elixir
+    # - ghq
+    # - go
+    # - hub
+    # - hyperterm
+    # - imagemagick
+    # - insomnia
+    # - mercurial
+    # - mongodb
+    # - mysql
+    # - phantomjs
+    # - redis
+    # - zsh

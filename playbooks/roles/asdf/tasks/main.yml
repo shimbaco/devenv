@@ -1,0 +1,4 @@
+- name: asdfをインストールする
+  homebrew:
+    name:  asdf
+    state: present

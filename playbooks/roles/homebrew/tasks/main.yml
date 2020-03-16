@@ -7,4 +7,4 @@
     tap: '{{ item }}'
     state: present
   with_items:
-    - caskroom/cask
+    - heroku/brew # Heroku CLIをインストールするときに必要

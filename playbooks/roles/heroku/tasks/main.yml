@@ -1,7 +1,4 @@
 - name: Heroku Toolbeltをインストールする
   homebrew:
-    name:  heroku-toolbelt
+    name:  heroku
     state: present
-
-- name: Install heroku-accounts
-  command: heroku plugins:install heroku-accounts

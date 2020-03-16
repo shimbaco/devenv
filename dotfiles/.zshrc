@@ -8,7 +8,7 @@ export GOPATH=$HOME/dev
 export PATH=$PATH:$GOBIN
 export PATH=$PATH:~/bin
 export PATH=$PATH:~/.rbenv/bin
-export PATH=$PATH:~/.deno/bin
+export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$GOENV_ROOT/shims
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:~/.yarn/bin
@@ -29,7 +29,8 @@ export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home
 # Docker
 export DOCKER_BUILDKIT=1
-
+# https://github.com/ansible/ansible/issues/32499
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 precmd() {
   # Sets the tab title to current dir
@@ -40,12 +41,10 @@ precmd() {
 # rbenv
 eval "$(rbenv init -)"
 
-# goenv
-eval "$(goenv init -)"
-
 # nvm
 export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # プロンプトの表示形式
 # http://news.mynavi.jp/column/zsh/002/index.html
@@ -78,7 +77,7 @@ setopt auto_cd
 chpwd_functions=($chpwd_functions dirs)
 
 # ヒストリを保存するファイル
-HISTFILE=~/docs/devenv/dotfiles/.zsh_history
+HISTFILE=~/Drive/devenv/dotfiles/.zsh_history
 
 # メモリ上のヒストリ数
 # 大きな数を指定してすべてのヒストリを保存するようにしている
@@ -116,17 +115,12 @@ for function in ~/.zsh/functions/*; do
   source $function
 done
 
-# enhancd
-source ~/dev/src/github.com/b4b4r07/enhancd/init.sh
-
 # asdf
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
+. $(brew --prefix asdf)/asdf.sh
+. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/shimbaco/dev/lib/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/shimbaco/dev/lib/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/usr/local/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/shimbaco/dev/lib/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/shimbaco/dev/lib/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/usr/local/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/google-cloud-sdk/completion.zsh.inc'; fi

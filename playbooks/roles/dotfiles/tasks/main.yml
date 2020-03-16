@@ -4,18 +4,13 @@
     path: ~/{{ item }}
     state: link
   with_items:
-    - .ackrc
     - .aliases
-    - .ctags
     - .gemrc
     - .gitconfig
     - .gitignore_global
     - .gvimrc
-    - .hyper.js
     - .pryrc
     - .railsrc
-    - .spring.rb
-    - .tmux.conf
     - .vimrc
     - .zlogin
     - .zshrc
@@ -23,7 +18,6 @@
 - name: 設定ファイルを配置する (ディレクトリ)
   command: ln -nfs ~/dev/src/github.com/shimbaco/devenv/dotfiles/{{ item }} ~/
   with_items:
-    - .atom
     - .bundle
     - .vim
     - .zsh

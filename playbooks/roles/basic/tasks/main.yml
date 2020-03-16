@@ -4,6 +4,6 @@
     state: present
   with_items:
     - wget
-    - pkg-config # RMagickをインストールするときに必要
-    - wrk # ベンチマークツール
-    - pwgen
+    # - pkg-config # RMagickをインストールするときに必要
+    # - wrk # ベンチマークツール
+    # - pwgen
