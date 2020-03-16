@@ -8,6 +8,7 @@ export GOPATH=$HOME/dev
 export PATH=$PATH:$GOBIN
 export PATH=$PATH:~/bin
 export PATH=$PATH:~/.rbenv/bin
+export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$GOENV_ROOT/shims
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:~/.yarn/bin
@@ -28,7 +29,8 @@ export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home
 # Docker
 export DOCKER_BUILDKIT=1
-
+# https://github.com/ansible/ansible/issues/32499
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 precmd() {
   # Sets the tab title to current dir

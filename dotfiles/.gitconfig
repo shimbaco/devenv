@@ -27,3 +27,5 @@
 	required = true
 [grep]
 	lineNumber = true
+[ghq]
+	root = /Users/shimbaco/dev/src
