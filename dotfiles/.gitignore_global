@@ -1,8 +1,10 @@
 *.log
+*.iml
 .DS_Store
 .tags
 .tags_swap
 
 /.idea
+/.sass-cache
 /tags
 /*.iml
