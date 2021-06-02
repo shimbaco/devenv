@@ -13,5 +13,6 @@ function hisf() {
     CURSOR=$#BUFFER
 
     print -s $BUFFER # 選択したコマンドをヒストリに追加する
-    eval $BUFFER
+#    eval $BUFFER
+    echo $BUFFER
 }

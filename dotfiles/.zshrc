@@ -120,7 +120,7 @@ done
 . $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/usr/local/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/shimbaco/dev/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/shimbaco/dev/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/usr/local/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/shimbaco/dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/shimbaco/dev/google-cloud-sdk/completion.zsh.inc'; fi
