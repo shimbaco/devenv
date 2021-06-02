@@ -6,24 +6,21 @@
   roles:
     - basic
     - dotfiles
-    - ssh
+    # - ssh
     - homebrew
-    - direnv
     - heroku
-    - asdf
-    - ruby
-    - nodejs
-    - postgresql
     - peco
-    - aws
-    - graphiql
 
+    # - asdf
     # - atom
+    # - aws
     # - ctags
+    # - direnv
     # - dropbox
     # - elixir
     # - ghq
     # - go
+    # - graphiql
     # - hub
     # - hyperterm
     # - imagemagick
@@ -31,6 +28,9 @@
     # - mercurial
     # - mongodb
     # - mysql
+    # - nodejs
     # - phantomjs
+    # - postgresql
     # - redis
+    # - ruby
     # - zsh
